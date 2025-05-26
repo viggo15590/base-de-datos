@@ -2,17 +2,20 @@
 <html>
 <head>
     <title>Agregar Detalle a Factura</title>
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <h2>Agregar Detalle a Factura</h2>
-    <form action="insertar.php" method="POST">
-        Nº Factura: <input type="text" name="num_fac" required><br><br>
-        Código Producto: <input type="text" name="cod_pro" required><br><br>
-        Cantidad: <input type="number" name="cant_det" required><br><br>
-        Precio Detalle: <input type="number" step="0.01" name="pre_det" required><br><br>
-        <button type="submit">Guardar Detalle</button>
-    </form>
+    <div class="form-container">
+        <h2>Agregar Detalle a Factura</h2>
+        <form action="insertar.php" method="POST">
+            <label for="num_fac">Nº Factura:</label>
+            <input type="text" id="num_fac" name="num_fac" required>
 
-    <p><a href="listar.php">Ver Detalles</a></p>
-</body>
-</html>
+            <label for="cod_pro">Código Producto:</label>
+            <input type="text" id="cod_pro" name="cod_pro" required>
+
+            <label for="cant_det">Cantidad:</label>
+            <input type="number" id="cant_det" name="cant_det" required>
+
+            <label for="pre_det">Precio Detalle:</label>
+            <input type="number" step="0.01" id="pre_det" name="pre_det" required>
